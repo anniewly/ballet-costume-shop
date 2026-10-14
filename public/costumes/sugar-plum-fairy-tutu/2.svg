@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#f6e7e9"/>
+  <g fill="#d9a3ab" opacity="0.85">
+    <circle cx="400" cy="250" r="46"/>
+    <path d="M362 310h76l22 170H340z"/>
+    <ellipse cx="400" cy="500" rx="230" ry="46"/>
+    <path d="M378 540h14l-6 260h-12zM408 540h14l4 260h-12z"/>
+  </g>
+  <text x="400" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#d9a3ab">Sugar Plum Fairy Tutu</text>
+  <text x="400" y="930" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" letter-spacing="4" fill="#d9a3ab">Back · placeholder photo</text>
+</svg>
