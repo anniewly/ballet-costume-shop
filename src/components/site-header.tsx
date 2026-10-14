@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CartLink } from "@/components/cart-link";
 import { site } from "@/lib/site";
 
 export function SiteHeader() {
@@ -12,10 +13,7 @@ export function SiteHeader() {
           <Link href="/shop" className="hover:text-rose">
             Shop
           </Link>
-          {/* The cart step replaces this link with one that shows the item count. */}
-          <Link href="/cart" className="hover:text-rose">
-            Cart
-          </Link>
+          <CartLink />
         </nav>
       </div>
     </header>

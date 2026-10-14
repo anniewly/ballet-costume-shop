@@ -23,7 +23,8 @@ Checks: `npm run lint`, `npm run typecheck`, `npm run build`.
 | `src/lib/costumes.ts` | Costume types (`Costume`, `Size`, `Category`) and lookup helpers. |
 | `src/lib/site.ts` | Shop name, tagline, contact email, currency and flat shipping. |
 | `src/lib/format.ts` | Price formatting. |
-| `src/components/` | Shared UI: demo banner, header, footer, costume card and image. |
+| `src/lib/cart.ts` | The cart, saved in the browser: `useCart()`, `addToCart()`, `setCart()`. |
+| `src/components/` | Shared UI: demo banner, header, footer, costume card and image, photo gallery, size picker with Add to cart. |
 | `src/app/` | Pages: `/`, `/shop`, `/costume/[slug]`, `/cart`, `/success`. |
 | `public/costumes/<slug>/` | Costume photos (4:5 portrait). |
 
