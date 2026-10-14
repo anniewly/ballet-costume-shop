@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "swan-lake-white-tutu",
+    "name": "Swan Lake White Tutu",
+    "category": "tutus",
+    "price": 38900,
+    "description": "A classical platter tutu in ivory tulle with a hand-beaded bodice and feather accents, made for Odette's Act II entrance.",
+    "fabric": "Stretch satin bodice, 12 layers of stiff nylon tulle, glass beads",
+    "sizes": ["XS", "S", "M", "L"],
+    "photos": [
+      { "src": "/costumes/swan-lake-white-tutu/1.svg", "alt": "White classical tutu, front view" },
+      { "src": "/costumes/swan-lake-white-tutu/2.svg", "alt": "White classical tutu, back view" },
+      { "src": "/costumes/swan-lake-white-tutu/3.svg", "alt": "White classical tutu, bodice beading close-up" }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "sugar-plum-fairy-tutu",
+    "name": "Sugar Plum Fairy Tutu",
+    "category": "tutus",
+    "price": 42500,
+    "description": "A rose-pink platter tutu with a velvet bodice, iridescent sequins and a jewelled headpiece for the Nutcracker's grand pas de deux.",
+    "fabric": "Velvet bodice, layered nylon tulle, sequin appliqué",
+    "sizes": ["XS", "S", "M", "L"],
+    "photos": [
+      { "src": "/costumes/sugar-plum-fairy-tutu/1.svg", "alt": "Pink Sugar Plum Fairy tutu, front view" },
+      { "src": "/costumes/sugar-plum-fairy-tutu/2.svg", "alt": "Pink Sugar Plum Fairy tutu, back view" },
+      { "src": "/costumes/sugar-plum-fairy-tutu/3.svg", "alt": "Pink Sugar Plum Fairy tutu, sequin detail" }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "giselle-romantic-tutu",
+    "name": "Giselle Romantic Tutu",
+    "category": "tutus",
+    "price": 29500,
+    "description": "A calf-length romantic tutu in soft white tulle with a fitted bodice and puff sleeves, for the Wilis of Act II.",
+    "fabric": "Cotton-blend bodice, soft bridal tulle skirt",
+    "sizes": ["XS", "S", "M", "L"],
+    "photos": [
+      { "src": "/costumes/giselle-romantic-tutu/1.svg", "alt": "White romantic tutu, front view" },
+      { "src": "/costumes/giselle-romantic-tutu/2.svg", "alt": "White romantic tutu, back view" },
+      { "src": "/costumes/giselle-romantic-tutu/3.svg", "alt": "White romantic tutu, sleeve detail" }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "black-velvet-leotard",
+    "name": "Black Velvet Leotard",
+    "category": "leotards",
+    "price": 6800,
+    "description": "A long-sleeve velvet leotard with a low back and mesh insert, for class, rehearsal and contemporary pieces.",
+    "fabric": "Stretch velvet, power mesh",
+    "sizes": ["XS", "S", "M", "L"],
+    "photos": [
+      { "src": "/costumes/black-velvet-leotard/1.svg", "alt": "Black velvet leotard, front view" },
+      { "src": "/costumes/black-velvet-leotard/2.svg", "alt": "Black velvet leotard, back view" }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "kitri-don-quixote-dress",
+    "name": "Kitri Don Quixote Dress",
+    "category": "character",
+    "price": 24500,
+    "description": "A red and black Spanish-style dress with a ruffled skirt and lace trim, cut to move for Kitri's Act I variation.",
+    "fabric": "Stretch satin, chiffon ruffles, cotton lace",
+    "sizes": ["XS", "S", "M", "L"],
+    "photos": [
+      { "src": "/costumes/kitri-don-quixote-dress/1.svg", "alt": "Red Kitri character dress, front view" },
+      { "src": "/costumes/kitri-don-quixote-dress/2.svg", "alt": "Red Kitri character dress, back view" },
+      { "src": "/costumes/kitri-don-quixote-dress/3.svg", "alt": "Red Kitri character dress, lace detail" }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "little-snowflake-tutu",
+    "name": "Little Snowflake Tutu",
+    "category": "kids",
+    "price": 8900,
+    "description": "A children's pull-on tutu in pale blue and silver with a glitter bodice, made for first recitals and the Snow scene.",
+    "fabric": "Spandex bodice with glitter print, soft tulle skirt",
+    "sizes": ["XS", "S", "M", "L"],
+    "photos": [
+      { "src": "/costumes/little-snowflake-tutu/1.svg", "alt": "Children's pale blue snowflake tutu, front view" },
+      { "src": "/costumes/little-snowflake-tutu/2.svg", "alt": "Children's pale blue snowflake tutu, back view" }
+    ],
+    "featured": false
+  }
+]
