@@ -7,4 +7,5 @@ export const site = {
   contactEmail: "hello@example.com",
   currency: "usd",
   flatShipping: 1200, // cents; used by the cart and checkout step
+  maxQuantity: 10, // most of one costume in one size per order
 };
