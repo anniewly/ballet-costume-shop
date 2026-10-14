@@ -9,16 +9,12 @@ import { getStripe } from "@/lib/stripe";
 export type CheckoutResult = { url: string } | { error: string };
 
 /**
- * Creates a Stripe Checkout session for the cart and returns its URL.
+ * Returns where to send the shopper to pay: a Stripe Checkout session when
+ * STRIPE_SECRET_KEY is set, otherwise the built-in test checkout at /checkout.
  * The cart comes from the browser, so names and prices are looked up again
  * here from the catalog; only the slug, size and quantity are trusted.
  */
 export async function startCheckout(items: CartItem[]): Promise<CheckoutResult> {
-  const stripe = getStripe();
-  if (!stripe) {
-    return { error: "Checkout isn't set up yet: the Stripe key is missing." };
-  }
-
   const lineItems = [];
   for (const item of Array.isArray(items) ? items : []) {
     const costume = getCostume(item?.slug);
@@ -45,6 +41,9 @@ export async function startCheckout(items: CartItem[]): Promise<CheckoutResult> 
     });
   }
   if (lineItems.length === 0) return { error: "Your cart is empty." };
+
+  const stripe = getStripe();
+  if (!stripe) return { url: "/checkout" };
 
   // Return to the address the shopper is on, so preview deployments work too.
   const origin =

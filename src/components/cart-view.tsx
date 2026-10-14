@@ -1,20 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useSyncExternalStore, useTransition } from "react";
+import { useRouter } from "next/navigation";
+import { useState, useTransition } from "react";
 import { startCheckout } from "@/app/cart/actions";
 import { CostumeImage } from "@/components/costume-image";
 import { removeFromCart, updateQuantity, useCart } from "@/lib/cart";
 import { getCostume } from "@/lib/costumes";
 import { formatPrice } from "@/lib/format";
 import { site } from "@/lib/site";
-
-const noop = () => () => {};
-
-/** False while server rendering, so the empty-cart message doesn't flash before the saved cart loads. */
-function useHydrated(): boolean {
-  return useSyncExternalStore(noop, () => true, () => false);
-}
+import { useHydrated } from "@/lib/use-hydrated";
 
 /** The cart's lines, totals and Checkout button. */
 export function CartView() {
@@ -22,6 +17,7 @@ export function CartView() {
   const items = useCart();
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+  const router = useRouter();
 
   // Skip lines whose costume has since left the catalog.
   const lines = items.flatMap((item) => {
@@ -37,7 +33,9 @@ export function CartView() {
         lines.map(({ slug, size, quantity }) => ({ slug, size, quantity })),
       );
       if ("url" in result) {
-        window.location.assign(result.url);
+        // Stripe's page is on another site; the test checkout is part of this one.
+        if (result.url.startsWith("/")) router.push(result.url);
+        else window.location.assign(result.url);
       } else {
         setError(result.error);
       }
@@ -139,9 +137,6 @@ export function CartView() {
         >
           {pending ? "Opening checkout…" : "Checkout"}
         </button>
-        <p className="text-xs text-ink/60">
-          Demo checkout: pay with the test card 4242 4242 4242 4242, any future date and any CVC.
-        </p>
         <p className="min-h-5 text-sm text-rose" role="alert">
           {error}
         </p>
