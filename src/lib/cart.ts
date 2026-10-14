@@ -64,6 +64,24 @@ export function addToCart(slug: string, size: Size, quantity = 1): void {
   );
 }
 
+/** Sets the quantity of one cart line; a quantity of 0 or less removes it. */
+export function updateQuantity(slug: string, size: Size, quantity: number): void {
+  const items = getCart();
+  setCart(
+    quantity > 0
+      ? items.map((i) => (i.slug === slug && i.size === size ? { ...i, quantity } : i))
+      : items.filter((i) => !(i.slug === slug && i.size === size)),
+  );
+}
+
+export function removeFromCart(slug: string, size: Size): void {
+  updateQuantity(slug, size, 0);
+}
+
+export function clearCart(): void {
+  setCart([]);
+}
+
 function subscribe(onChange: () => void): () => void {
   const onStorage = (e: StorageEvent) => {
     if (e.key === STORAGE_KEY) onChange();
